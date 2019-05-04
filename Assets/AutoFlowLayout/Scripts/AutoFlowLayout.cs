@@ -50,7 +50,7 @@ public class AutoFlowLayout : MonoBehaviour, ILayoutGroup
             childRectTransform.anchorMax = new Vector2(0, 1);
             childRectTransform.pivot = new Vector2(0, 1);
 
-            if (x + childElement.preferredWidth > RectTransform.rect.width)
+            if (x + childElement.preferredWidth + _padding > RectTransform.rect.width)
             {
                 // This item will not fit on the current line, so continue
                 // layout on the second line
